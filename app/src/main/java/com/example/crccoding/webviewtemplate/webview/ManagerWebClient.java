@@ -9,8 +9,6 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.example.crccoding.webviewtemplate.ErrorActivity;
-
 /**
  * Created by CRCCODING on 18/10/2017.
  */
@@ -57,8 +55,6 @@ public class ManagerWebClient extends WebViewClient {
     public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
         //
         view.setVisibility(View.INVISIBLE);
-        Intent intent = new Intent(gvContext, ErrorActivity.class);
-        intent.putExtra("error","WEB");
-        gvContext.startActivity(intent);
+        new ControladorError(gvContext).showErrorDialog();
     }
 }

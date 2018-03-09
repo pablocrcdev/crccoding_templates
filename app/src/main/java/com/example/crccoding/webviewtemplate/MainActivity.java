@@ -64,11 +64,7 @@ public class MainActivity extends AppCompatActivity {
             // Seteo Default de Cliente de Google para el webview (Otras funcionalidades)
             gvWebView.setWebChromeClient(new ManagerChromeClient(this));
         } else {
-            // Se llama el activity de error
-            Intent intent = new Intent(this, ErrorActivity.class);
-            intent.putExtra("error",ERROR_RED);
-            startActivity(intent);
-            //new ControladorError(this).showNetworkDialog();
+            new ControladorError(this).showNetworkDialog();
         }
     }
 }
