@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     //********************************************************************************************//
     private WebView gvWebView;
     private ProgressBar gvProgressBar;
-    private final static String gvURL = "http://192.168.1.50:9090/crccoding/f?p=500";
+    private final static String gvURL = "URL_DESTINO_SERVIDOR";
     private final static String ERROR_RED = "RED";
     private final static String ERROR_WEB = "WEB";
     //********************************************************************************************//
